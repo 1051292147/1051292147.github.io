@@ -122,7 +122,7 @@
                   
                   &nbsp;<i class="far fa-chart-bar"></i>
                   <span class="post-count">
-                    8.1k 字
+                    8k 字
                   </span>&nbsp;
                 
 
@@ -130,7 +130,7 @@
                   
                   &nbsp;<i class="far fa-clock"></i>
                   <span class="post-count">
-                      33 分钟
+                      32 分钟
                   </span>&nbsp;
                 
 
@@ -163,14 +163,7 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
-            <h1 id="0-学习目标"><a href="#0-学习目标" class="headerlink" title="0.学习目标"></a>0.学习目标</h1><ul>
-<li>了解SpringBoot的作用</li>
-<li>掌握java配置的方式</li>
-<li>了解SpringBoot自动配置原理</li>
-<li>掌握SpringBoot的基本使用</li>
-<li>了解Thymeleaf的基本使用</li>
-</ul>
-<h1 id="1-了解SpringBoot"><a href="#1-了解SpringBoot" class="headerlink" title="1. 了解SpringBoot"></a>1. 了解SpringBoot</h1><p>在这一部分，我们主要了解以下3个问题：</p>
+            <h1 id="1-了解SpringBoot"><a href="#1-了解SpringBoot" class="headerlink" title="1. 了解SpringBoot"></a>1. 了解SpringBoot</h1><p>在这一部分，我们主要了解以下3个问题：</p>
 <ul>
 <li>什么是SpringBoot</li>
 <li>为什么要学习SpringBoot</li>
@@ -209,7 +202,6 @@
 <li>绝对没有代码生成，也无需 XML 配置。</li>
 </ul>
 <p>更多细节，大家可以到<a href="http://projects.spring.io/spring-boot/" target="_blank" rel="noopener">官网</a>查看。</p>
-<p><strong>吾爱程序猿（<a href="http://www.52programer.com）打造专业优质的IT教程分享社区" target="_blank" rel="noopener">www.52programer.com）打造专业优质的IT教程分享社区</a></strong></p>
 <h1 id="2-快速入门"><a href="#2-快速入门" class="headerlink" title="2.快速入门"></a>2.快速入门</h1><p>接下来，我们就来利用SpringBoot搭建一个web工程，体会一下SpringBoot的魅力所在！</p>
 <h2 id="2-1-创建工程"><a href="#2-1-创建工程" class="headerlink" title="2.1.创建工程"></a>2.1.创建工程</h2><p>我们先新建一个空的工程：</p>
 <p><img src="D:%5C%E7%BD%91%E8%AF%BE%5Cithiema%5C%E8%AE%B2%E4%B9%89+%E7%AC%94%E8%AE%B0+%E8%B5%84%E6%96%99%5C%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%94%B5%E5%95%86-%E4%B9%90%E4%BC%98%E5%95%86%E5%9F%8E%5C%E4%B9%90%E4%BC%98%E5%95%86%E5%9F%8E%E3%80%8A%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0%E3%80%8B%5Cday01%E7%AC%94%E8%AE%B0%5Cassets%5C1525485888078.png" srcset="/img/loading.gif" alt="1525485888078"></p>
@@ -492,7 +484,6 @@ public class JdbcConfig {
 <p>我们直接把<code>@ConfigurationProperties(prefix = &quot;jdbc&quot;)</code>声明在需要使用的<code>@Bean</code>的方法上，然后SpringBoot就会自动调用这个Bean（此处是DataSource）的set方法，然后完成注入。使用的前提是：<strong>该类必须有对应属性的set方法！</strong></p>
 <p>我们将jdbc的url改成：/heima，再次测试：</p>
 <p><img src="D:%5C%E7%BD%91%E8%AF%BE%5Cithiema%5C%E8%AE%B2%E4%B9%89+%E7%AC%94%E8%AE%B0+%E8%B5%84%E6%96%99%5C%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%94%B5%E5%95%86-%E4%B9%90%E4%BC%98%E5%95%86%E5%9F%8E%5C%E4%B9%90%E4%BC%98%E5%95%86%E5%9F%8E%E3%80%8A%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0%E3%80%8B%5Cday01%E7%AC%94%E8%AE%B0%5Cassets%5C1525497513206.png" srcset="/img/loading.gif" alt="1525497513206"></p>
-<p>吾爱程序猿（<a href="http://www.52programer.com）打造专业优质的IT教程分享社区" target="_blank" rel="noopener">www.52programer.com）打造专业优质的IT教程分享社区</a></p>
 <h1 id="4-自动配置原理"><a href="#4-自动配置原理" class="headerlink" title="4.自动配置原理"></a>4.自动配置原理</h1><p>使用SpringBoot之后，一个整合了SpringMVC的WEB工程开发，变的无比简单，那些繁杂的配置都消失不见了，这是如何做到的？</p>
 <p>一切魔力的开始，都是从我们的main函数来的，所以我们再次来看下启动类：</p>
 <p> <img src="D:%5C%E7%BD%91%E8%AF%BE%5Cithiema%5C%E8%AE%B2%E4%B9%89+%E7%AC%94%E8%AE%B0+%E8%B5%84%E6%96%99%5C%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%94%B5%E5%95%86-%E4%B9%90%E4%BC%98%E5%95%86%E5%9F%8E%5C%E4%B9%90%E4%BC%98%E5%95%86%E5%9F%8E%E3%80%8A%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0%E3%80%8B%5Cday01%E7%AC%94%E8%AE%B0%5Cassets%5C1525488044650.png" srcset="/img/loading.gif" alt="1525488044650"></p>
@@ -792,7 +783,6 @@ public class HelloController {
 </code></pre>
 <p>我们启动项目，查看：</p>
 <p> <img src="D:%5C%E7%BD%91%E8%AF%BE%5Cithiema%5C%E8%AE%B2%E4%B9%89+%E7%AC%94%E8%AE%B0+%E8%B5%84%E6%96%99%5C%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%94%B5%E5%95%86-%E4%B9%90%E4%BC%98%E5%95%86%E5%9F%8E%5C%E4%B9%90%E4%BC%98%E5%95%86%E5%9F%8E%E3%80%8A%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0%E3%80%8B%5Cday01%E7%AC%94%E8%AE%B0%5Cassets%5C1525516714124.png" srcset="/img/loading.gif" alt="1525516714124"></p>
-<p>吾爱程序猿（<a href="http://www.52programer.com）打造专业优质的IT教程分享社区" target="_blank" rel="noopener">www.52programer.com）打造专业优质的IT教程分享社区</a></p>
 <h1 id="6-Thymeleaf快速入门"><a href="#6-Thymeleaf快速入门" class="headerlink" title="6.Thymeleaf快速入门"></a>6.Thymeleaf快速入门</h1><p>SpringBoot并不推荐使用jsp，但是支持一些模板引擎技术：</p>
 <p><img src="D:%5C%E7%BD%91%E8%AF%BE%5Cithiema%5C%E8%AE%B2%E4%B9%89+%E7%AC%94%E8%AE%B0+%E8%B5%84%E6%96%99%5C%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%94%B5%E5%95%86-%E4%B9%90%E4%BC%98%E5%95%86%E5%9F%8E%5C%E4%B9%90%E4%BC%98%E5%95%86%E5%9F%8E%E3%80%8A%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0%E3%80%8B%5Cday01%E7%AC%94%E8%AE%B0%5Cassets%5C1525517263421.png" srcset="/img/loading.gif" alt="1525517263421"></p>
 <p>以前大家用的比较多的是Freemarker，但是我们今天的主角是Thymeleaf！</p>
@@ -883,9 +873,7 @@ public String all(ModelMap model) {
 </ul>
 </li>
 </ul>
-<h2 id="6-5-测试"><a href="#6-5-测试" class="headerlink" title="6.5.测试"></a>6.5.测试</h2><p>接下来，我们打开页面测试一下：</p>
-<p><img src="D:%5C%E7%BD%91%E8%AF%BE%5Cithiema%5C%E8%AE%B2%E4%B9%89+%E7%AC%94%E8%AE%B0+%E8%B5%84%E6%96%99%5C%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%94%B5%E5%95%86-%E4%B9%90%E4%BC%98%E5%95%86%E5%9F%8E%5C%E4%B9%90%E4%BC%98%E5%95%86%E5%9F%8E%E3%80%8A%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0%E3%80%8B%5Cday01%E7%AC%94%E8%AE%B0%5Cassets%5C1525523911854.png" srcset="/img/loading.gif" alt="1525523911854"></p>
-<h2 id="6-6-模板缓存"><a href="#6-6-模板缓存" class="headerlink" title="6.6.模板缓存"></a>6.6.模板缓存</h2><p>Thymeleaf会在第一次对模板解析之后进行缓存，极大的提高了并发处理能力。但是这给我们开发带来了不便，修改页面后并不会立刻看到效果，我们开发阶段可以关掉缓存使用：</p>
+<h2 id="6-5-模板缓存"><a href="#6-5-模板缓存" class="headerlink" title="6.5.模板缓存"></a>6.5.模板缓存</h2><p>Thymeleaf会在第一次对模板解析之后进行缓存，极大的提高了并发处理能力。但是这给我们开发带来了不便，修改页面后并不会立刻看到效果，我们开发阶段可以关掉缓存使用：</p>
 <pre><code class="properties"># 开发阶段关闭thymeleaf的模板缓存
 spring.thymeleaf.cache=false</code></pre>
 <p><strong>注意</strong>：</p>
